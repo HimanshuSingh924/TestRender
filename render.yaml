@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: test-render-springboot   # apna project ka naam, unique rakhna
+    env: java
+    plan: free
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/app.jar"
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
